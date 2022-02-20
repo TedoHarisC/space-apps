@@ -23,16 +23,64 @@ class OnBoardingPage extends StatelessWidget {
                     SizedBox(height: 127),
                     Text(
                       'Buy Furniture Easily',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 26,
-                      ),
+                      // style: blackTextStyle.copyWith(
+                      //   fontSize: 26,
+                      // ),
                     ),
                     SizedBox(height: 10),
                     Text(
                       'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse',
-                      style: greyTextStyle.copyWith(
-                        fontSize: 18,
-                      ),
+                      // style: greyTextStyle.copyWith(
+                      //   fontSize: 18,
+                      // ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    SizedBox(height: 100),
+                    Image.asset(
+                      'assets/image_onboarding1.png',
+                      width: double.infinity,
+                    ),
+                    SizedBox(height: 127),
+                    Text(
+                      'Buy Furniture Easily',
+                      // style: blackTextStyle.copyWith(
+                      //   fontSize: 26,
+                      // ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse',
+                      // style: greyTextStyle.copyWith(
+                      //   fontSize: 18,
+                      // ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    SizedBox(height: 100),
+                    Image.asset(
+                      'assets/image_onboarding1.png',
+                      width: double.infinity,
+                    ),
+                    SizedBox(height: 127),
+                    Text(
+                      'Buy Furniture Easily',
+                      // style: blackTextStyle.copyWith(
+                      //   fontSize: 26,
+                      // ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse',
+                      // style: greyTextStyle.copyWith(
+                      //   fontSize: 18,
+                      // ),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -56,9 +104,9 @@ class OnBoardingPage extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'SKIP',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 18,
-                    ),
+                    // style: blackTextStyle.copyWith(
+                    //   fontSize: 18,
+                    // ),
                   ),
                 ),
                 Row(
@@ -95,9 +143,9 @@ class OnBoardingPage extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'NEXT',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 18,
-                    ),
+                    // style: blackTextStyle.copyWith(
+                    //   fontSize: 18,
+                    // ),
                   ),
                 ),
               ],
