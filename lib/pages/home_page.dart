@@ -88,33 +88,38 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               //SEARCH BUTTON
-              Container(
-                margin: EdgeInsets.only(
-                  top: 30,
-                  left: 24,
-                  right: 24,
-                ),
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: kWhiteColor,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Search Furniture',
-                      style: greyTextStyle.copyWith(
-                        fontSize: 14,
-                        fontWeight: semiBold,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/search');
+                },
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 30,
+                    left: 24,
+                    right: 24,
+                  ),
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    color: kWhiteColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Search Furniture',
+                        style: greyTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                    ),
-                    Image.asset(
-                      'assets/icon_search.png',
-                      width: 24,
-                      color: kGreyColor,
-                    ),
-                  ],
+                      Image.asset(
+                        'assets/icon_search.png',
+                        width: 24,
+                        color: kGreyColor,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               // NOTE : CATEGORY TITLE
