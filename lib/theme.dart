@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Color kBlackColor = Color(0xff222222);
 Color kBlackAccentColor = Color(0xff2A2B37);
@@ -10,44 +11,44 @@ Color kRedColor = Color(0xffFF314A);
 Color kYellowColor = Color(0xffFFBA00);
 Color kBlueColor = Color(0xff2972FF);
 
-// TextStyle blackTextStyle = GoogleFonts.poppins(
-//   color: kBlackColor,
-// );
-
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
 FontWeight medium = FontWeight.w500;
 FontWeight semiBold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
 
-// TextStyle blackAccentTextStyle = GoogleFonts.nunito(
-//   color: kBlackAccentColor,
-// );
+TextStyle blackTextStyle = GoogleFonts.poppins(
+  color: kBlackColor,
+);
 
-// TextStyle greyTextStyle = GoogleFonts.nunito(
-//   color: kGreyColor,
-// );
+TextStyle blackAccentTextStyle = GoogleFonts.nunito(
+  color: kBlackAccentColor,
+);
 
-// TextStyle lineDarkTextStyle = GoogleFonts.nunito(
-//   color: kLineDarkColor,
-// );
+TextStyle greyTextStyle = GoogleFonts.nunito(
+  color: kGreyColor,
+);
 
-// TextStyle whiteGreyTextStyle = GoogleFonts.nunito(
-//   color: kWhiteGreyColor,
-// );
+TextStyle lineDarkTextStyle = GoogleFonts.nunito(
+  color: kLineDarkColor,
+);
 
-// TextStyle whiteTextStyle = GoogleFonts.nunito(
-//   color: kWhiteColor,
-// );
+TextStyle whiteGreyTextStyle = GoogleFonts.nunito(
+  color: kWhiteGreyColor,
+);
 
-// TextStyle redTextStyle = GoogleFonts.nunito(
-//   color: kRedColor,
-// );
+TextStyle whiteTextStyle = GoogleFonts.nunito(
+  color: kWhiteColor,
+);
 
-// TextStyle yellowTextStyle = GoogleFonts.nunito(
-//   color: kYellowColor,
-// );
+TextStyle redTextStyle = GoogleFonts.nunito(
+  color: kRedColor,
+);
 
-// TextStyle blueTextStyle = GoogleFonts.nunito(
-//   color: kBlueColor,
-// );
+TextStyle yellowTextStyle = GoogleFonts.nunito(
+  color: kYellowColor,
+);
+
+TextStyle blueTextStyle = GoogleFonts.nunito(
+  color: kBlueColor,
+);

@@ -43,10 +43,10 @@ class _SplashPageState extends State<SplashPage> {
             ),
             Text(
               'Space',
-              // style: whiteTextStyle.copyWith(
-              //   fontSize: 36,
-              //   fontWeight: bold,
-              // ),
+              style: whiteTextStyle.copyWith(
+                fontSize: 36,
+                fontWeight: bold,
+              ),
             ),
           ],
         ),
