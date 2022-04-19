@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:space/theme.dart';
 
-class RecomendationItem extends StatelessWidget {
+class ProductListItem extends StatelessWidget {
   final String imageUrl;
   final String title;
   final int price;
 
-  const RecomendationItem({
+  const ProductListItem({
     Key? key,
     required this.imageUrl,
     required this.title,
