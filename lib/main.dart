@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:space/pages/category_page.dart';
 import 'package:space/pages/home_page.dart';
 import 'package:space/pages/onboarding_page.dart';
+import 'package:space/pages/profile_page.dart';
 import 'package:space/pages/search_page.dart';
 import 'package:space/pages/search_result_page.dart';
 import 'package:space/pages/sign_in_page.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/search-result': (context) => SearchResultPage(),
         '/category': (context) => CategoryPage(),
         '/wishlist': (context) => WishlistPage(),
+        '/profile': (context) => ProfilePage(),
       },
     );
   }

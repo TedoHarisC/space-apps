@@ -30,6 +30,8 @@ class _HomePageState extends State<HomePage> {
           onTap: (value) {
             if (value == 1) {
               Navigator.pushNamed(context, '/wishlist');
+            } else if (value == 2) {
+              Navigator.pushNamed(context, '/profile');
             }
           },
           items: [
@@ -37,6 +39,7 @@ class _HomePageState extends State<HomePage> {
               icon: Image.asset(
                 'assets/icon_home.png',
                 width: 24,
+                color: kBlueColor,
               ),
               label: 'Home',
             ),
