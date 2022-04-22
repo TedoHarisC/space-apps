@@ -6,6 +6,7 @@ import 'package:space/pages/search_page.dart';
 import 'package:space/pages/search_result_page.dart';
 import 'package:space/pages/sign_in_page.dart';
 import 'package:space/pages/splash_page.dart';
+import 'package:space/pages/wishlist_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/search': (context) => SearchPage(),
         '/search-result': (context) => SearchResultPage(),
         '/category': (context) => CategoryPage(),
+        '/wishlist': (context) => WishlistPage(),
       },
     );
   }
