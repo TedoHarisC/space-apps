@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space/theme.dart';
+import 'package:space/widgets/review_item.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -13,11 +14,13 @@ class _DetailPageState extends State<DetailPage> {
   double indicatorMargin = 5;
   int currentIndex = 1;
   bool isExpand = false;
+  bool isShowReview = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kWhiteGreyColor,
+      extendBody: true,
       body: Stack(
         children: [
           Image.asset('assets/image_background.png'),
@@ -71,6 +74,7 @@ class _DetailPageState extends State<DetailPage> {
                         } else {
                           setState(() {
                             isExpand = false;
+                            isShowReview = false;
                           });
                         }
                       }
@@ -197,6 +201,52 @@ class _DetailPageState extends State<DetailPage> {
                                 height: 1.8,
                               ),
                             ),
+                            SizedBox(height: 50),
+                            isShowReview
+                                ? Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Review',
+                                        style: blackTextStyle.copyWith(
+                                            fontSize: 22, fontWeight: semiBold),
+                                      ),
+                                      SizedBox(height: 18),
+                                      ReviewItem(
+                                        name: 'Lidya Clayton',
+                                        imageUrl: 'assets/image_reviewer1.png',
+                                        review:
+                                            'Open repair of infrarenal aortic aneurysm or dissection, plus of a repair of associated arterial...',
+                                        items: [
+                                          'assets/image_product_list1.png',
+                                          'assets/image_product_list2.png',
+                                          'assets/image_product_list3.png'
+                                        ],
+                                      ),
+                                      ReviewItem(
+                                        name: 'Audra Still',
+                                        imageUrl: 'assets/img_reviewer2.png',
+                                        review:
+                                            'Open repair of infrarenal aortic aneurysm or dissection, plus of a repair of associated arterial...',
+                                        items: [
+                                          'assets/image_product_list3.png',
+                                          'assets/image_product_list4.png'
+                                        ],
+                                      ),
+                                      ReviewItem(
+                                        name: 'Joan Gray',
+                                        imageUrl: 'assets/img_reviewer3.png',
+                                        review:
+                                            'Open repair of infrarenal aortic aneurysm or dissection, plus of a repair of associated arterial...',
+                                        items: [
+                                          'assets/image_product_list2.png',
+                                          'assets/image_product_list3.png'
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                : SizedBox(),
                           ],
                         ),
                       ),
@@ -208,66 +258,98 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ],
       ),
-      bottomNavigationBar: isExpand
+      bottomNavigationBar: isShowReview
           ? null
-          : Container(
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20),
-                  topLeft: Radius.circular(20),
-                ),
-                color: kWhiteColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: kGreyColor,
-                    blurRadius: 5,
-                    offset: Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 56,
-                    height: 56,
-                    margin: EdgeInsets.only(right: 16),
-                    decoration: BoxDecoration(
-                      color: kWhiteGreyColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/icon_cart.png',
-                        width: 24,
-                      ),
+          : isExpand
+              ? Container(
+                  width: double.infinity,
+                  height: 315,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        kWhiteColor.withOpacity(0.5),
+                        kWhiteColor,
+                      ],
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      height: 56,
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                          backgroundColor: kBlackColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                        ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          setState(() {
+                            isShowReview = true;
+                          });
+                        },
                         child: Text(
-                          'Buy Now',
-                          style: whiteTextStyle.copyWith(
-                            fontSize: 16,
-                            fontWeight: semiBold,
+                          'See More',
+                          style: blueTextStyle.copyWith(
+                              fontSize: 16, fontWeight: semiBold),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              : Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20),
+                    ),
+                    color: kWhiteColor,
+                    boxShadow: [
+                      BoxShadow(
+                        color: kGreyColor,
+                        blurRadius: 5,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 56,
+                        height: 56,
+                        margin: EdgeInsets.only(right: 16),
+                        decoration: BoxDecoration(
+                          color: kWhiteGreyColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Image.asset(
+                            'assets/icon_cart.png',
+                            width: 24,
                           ),
                         ),
                       ),
-                    ),
+                      Expanded(
+                        child: Container(
+                          width: double.infinity,
+                          height: 56,
+                          child: TextButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              backgroundColor: kBlackColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                            ),
+                            child: Text(
+                              'Buy Now',
+                              style: whiteTextStyle.copyWith(
+                                fontSize: 16,
+                                fontWeight: semiBold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
+                ),
     );
   }
 
