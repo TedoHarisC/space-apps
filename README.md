@@ -1,12 +1,12 @@
 ## space-apps
 
-<img src="assets/thumbnail.png">
+<img src="assets/thumbnail.png"/>
 
------
+-- 
 
 Space Apps adalah aplikasi e-commerce untuk kebutuhan perabotan anda
 
------
+-- 
 
 Using BLOC state management so you can try using this state management in this project. Learn form BWA (buildwithangga)
 
